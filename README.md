@@ -21,16 +21,19 @@
 输入文件 in.txt 中有四行输入,分别是开始图形的x坐标,开始的y坐标,结束图形的x坐标,结束的 y坐标。
 本程序使用Processing开发(源代码pde文件,类JAVA语法,用文本文件方式打开即可)。代码中可 以通过修改变量的值在0,1,2这三种方法中切换。
 
->void draw() {
-if(move==1){ 
-  background(255);
-  fill(0); 
-  interpolation(timeline,2); 
-  timeline=timeline+10; 
-  if(timeline>=1000){
-    move=0; 
+```java
+void draw() {
+  if(move==1){ 
+    background(255);
+    fill(0); 
+    interpolation(timeline,2); 
+    timeline=timeline+10; 
+    if(timeline>=1000){
+      move=0; 
+      }
     }
+  saveFrame("frames/####.png"); 
 }
-saveFrame("frames/####.png"); }
+```
 
 最重输出的程序是用论文中的方法,即方法2。
